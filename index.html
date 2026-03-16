@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Antalya kombi bakımı ve klima bakımı uzmanı. Kombi periyodik bakım, klima temizliği, gaz dolumu, arıza onarım hizmetleri. Uygun fiyat, garantili servis. ☎️ Hemen arayın!">
+    <meta name="keywords" content="antalya kombi bakımı, antalya klima bakımı, kombi servisi antalya, klima servisi antalya, kombi temizliği, klima gaz dolumu, kombi arıza, klima arıza, periyodik bakım antalya">
+    <meta name="author" content="Antalya Mekanik">
+    <meta property="og:title" content="Antalya Kombi Bakımı & Klima Bakımı - Profesyonel Servis">
+    <meta property="og:description" content="Antalya'da kombi ve klima bakımı uzmanı. Periyodik bakım, temizlik, gaz dolumu ve arıza onarım. ☎️ 0500 123 45 67">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://antalyamekanik.com.tr">
+    <meta property="og:image" content="https://antalyamekanik.com.tr/og-image.jpg">
+    
+    <link rel="canonical" href="https://antalyamekanik.com.tr">
+    
+    <title>Antalya Kombi Bakımı & Klima Bakımı | Uygun Fiyat Garantili Servis ⭐</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons - Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
+    
+    <style>
+        :root {
+            --primary: #0A4D8C;
+            --primary-dark: #083A6B;
+            --secondary: #FF6B35;
+            --secondary-dark: #E5511F;
+            --accent: #00BCD4;
+            --dark: #1A1A2E;
+            --gray: #6B7280;
+            --light-gray: #F3F4F6;
+            --white: #FFFFFF;
+            --shadow: rgba(10, 77, 140, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Rubik', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Barlow', sans-serif;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px var(--shadow);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .header.scrolled {
+            box-shadow: 0 4px 30px var(--shadow);
+        }
+        
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .logo i {
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .nav-menu a i {
+            font-size: 1.1rem;
+        }
+        
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+        
+        .cta-button {
+            background: var(--secondary);
+            color: var(--white);
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+        
+        .cta-button:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+            color: var(--white);
+        }
+        
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            min-height: 90vh;
+            background: linear-gradient(135deg, #0A4D8C 0%, #083A6B 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(0, 188, 212, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .hero-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            opacity: 0.05;
+            background-image: 
+                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
+        }
+        
+        .hero-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+        }
+        
+        .hero-content .highlight {
+            color: var(--secondary);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary, .btn-secondary {
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .btn-primary {
+            background: var(--secondary);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--white);
+            color: var(--primary);
+        }
+        
+        .hero-image {
+            position: relative;
+        }
+        
+        .hero-image-placeholder {
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .hero-image-placeholder i {
+            font-size: 5rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Features Grid */
+        .features {
+            padding: 5rem 2rem;
+            background: var(--light-gray);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.8rem;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
+        
+        .features-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px var(--shadow);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 40px var(--shadow);
+        }
+        
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            color: var(--white);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .feature-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+        
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        
+        .service-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            background: var(--light-gray);
+        }
+        
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            padding: 4rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stats::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 50%, rgba(0, 188, 212, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 70% 50%, rgba(255, 107, 53, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .stats-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .stat-item {
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+            font-family: 'Barlow', sans-serif;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 2rem;
+            background: var(--light-gray);
+        }
+        
+        .cta-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
+            padding: 4rem 3rem;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 10px 50px rgba(255, 107, 53, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .cta-container h2 {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-container p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-info {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: var(--white);
+        }
+        
+        .cta-info-item i {
+            font-size: 2rem;
+        }
+        
+        .cta-info-text strong {
+            display: block;
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+        
+        .btn-white {
+            background: var(--white);
+            color: var(--secondary);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 2rem 1.5rem;
+        }
+
+        /* Brands Section */
+        .brands-section {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+
+        .brands-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+        }
+
+        .brand-category h3 {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid var(--light-gray);
+        }
+
+        .brand-category h3 i {
+            color: var(--secondary);
+            font-size: 1.8rem;
+        }
+
+        .brand-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .brand-tag {
+            background: var(--light-gray);
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            font-weight: 500;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .brand-tag:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+
+        /* Service Areas */
+        .service-areas {
+            padding: 4rem 2rem;
+            background: var(--light-gray);
+        }
+
+        .areas-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .area-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .area-card:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px var(--shadow);
+        }
+
+        .area-card i {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .area-card h4 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .area-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 4rem 2rem;
+            background: var(--white);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--light-gray);
+            margin-bottom: 1rem;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px var(--shadow);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--white);
+            user-select: none;
+        }
+
+        .faq-question h3 {
+            font-size: 1.15rem;
+            color: var(--dark);
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .faq-question i {
+            color: var(--secondary);
+            transition: transform 0.3s ease;
+            font-size: 1.2rem;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background: var(--light-gray);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem 2rem;
+        }
+
+        .faq-answer p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 3rem 2rem 1.5rem;
+        }
+        
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .footer-col p, .footer-col a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-col a:hover {
+            color: var(--secondary);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-on-scroll {
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-buttons {
+                justify-content: center;
+            }
+            
+            .hero-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                flex-direction: column;
+                background: var(--white);
+                width: 100%;
+                padding: 2rem;
+                box-shadow: 0 4px 20px var(--shadow);
+                transition: left 0.3s ease;
+                gap: 1.5rem;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .menu-toggle {
+                display: block;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2.2rem;
+            }
+            
+            .features-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-container {
+                padding: 3rem 2rem;
+            }
+            
+            .cta-container h2 {
+                font-size: 2rem;
+            }
+            
+            .cta-info {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .brands-container {
+                grid-template-columns: 1fr;
+            }
+
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <i class="ph-bold ph-flame"></i>
+                <span>ANTALYA MEKANİK</span>
+            </a>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hizmetler"><i class="ph ph-wrench"></i> Hizmetlerimiz</a></li>
+                <li><a href="#ozellikler"><i class="ph ph-star"></i> Neden Biz?</a></li>
+                <li><a href="#iletisim"><i class="ph ph-chats-circle"></i> İletişim</a></li>
+                <li><a href="tel:+905001234567" class="cta-button">
+                    <i class="ph-bold ph-phone-call"></i> Hemen Ara
+                </a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="ph-bold ph-list"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-pattern"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Antalya <span class="highlight">Kombi Bakımı</span> ve <span class="highlight">Klima Bakımı</span> Uzmanı</h1>
+                <p>Kombi periyodik bakım, klima temizliği ve gaz dolumu hizmetlerinde 15 yıllık tecrübe. Tüm marka kombi ve klimalar için profesyonel bakım ve onarım. 7/24 acil servis desteği.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+905001234567" class="btn-primary">
+                        <i class="ph-bold ph-phone-call"></i> Ücretsiz Keşif
+                    </a>
+                    <a href="#hizmetler" class="btn-secondary">
+                        <i class="ph-bold ph-toolbox"></i> Bakım Paketleri
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-placeholder">
+                    <i class="ph-fill ph-gear-six" style="font-size: 8rem;"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="ozellikler">
+        <div class="section-header">
+            <h2>Kombi ve Klima Bakımında Neden Biz?</h2>
+            <p>Antalya'da kombi ve klima bakımı konusunda güvenilir ve profesyonel hizmet</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card animate-on-scroll">
+                <div class="feature-icon">
+                    <i class="ph-fill ph-medal"></i>
+                </div>
+                <h3>15 Yıllık Tecrübe</h3>
+                <p>Antalya'da 15 yıldır HVAC sektöründe hizmet veren uzman ekibimizle her türlü klima ve havalandırma sistemi ihtiyacınıza profesyonel çözümler sunuyoruz.</p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.1s;">
+                <div class="feature-icon">
+                    <i class="ph-fill ph-clock-afternoon"></i>
+                </div>
+                <h3>7/24 Acil Servis</h3>
+                <p>Hafta sonları ve resmi tatiller dahil günün her saati ulaşabileceğiniz acil servis hattımızla yanınızdayız. Arızalarınıza hızlı müdahale garantisi.</p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="feature-icon">
+                    <i class="ph-fill ph-seal-check"></i>
+                </div>
+                <h3>Garantili İşçilik</h3>
+                <p>Tüm bakım ve onarım hizmetlerimizde uzun süreli işçilik garantisi. Orijinal yedek parça kullanımı ve kalite taahhüdü.</p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.3s;">
+                <div class="feature-icon">
+                    <i class="ph-fill ph-currency-circle-dollar"></i>
+                </div>
+                <h3>Uygun Fiyat</h3>
+                <p>Şeffaf fiyatlandırma politikası ve piyasa koşullarına uygun rekabetçi fiyatlar. Gizli maliyet yok, net fiyat teklifi.</p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.4s;">
+                <div class="feature-icon">
+                    <i class="ph-fill ph-users-three"></i>
+                </div>
+                <h3>Profesyonel Ekip</h3>
+                <p>Sertifikalı ve sürekli eğitimli teknik personelimiz, son model teşhis ve tamir ekipmanlarıyla hizmetinizdedir.</p>
+            </div>
+            
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.5s;">
+                <div class="feature-icon">
+                    <i class="ph-fill ph-leaf"></i>
+                </div>
+                <h3>Çevre Dostu</h3>
+                <p>Enerji verimliliği ve çevre dostu uygulamalarla hem doğayı hem de cebinizi koruyan çözümler sunuyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="hizmetler">
+        <div class="section-header">
+            <h2>Kombi ve Klima Bakım Hizmetlerimiz</h2>
+            <p>Antalya genelinde tüm marka ve model kombi ve klimalar için profesyonel hizmet</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card animate-on-scroll">
+                <div class="service-icon">
+                    <i class="ph-fill ph-fire"></i>
+                </div>
+                <h3>Kombi Periyodik Bakımı</h3>
+                <p>Kombi temizliği, baca kontrolü, yanma analizi, emniyetlerin kontrolü. Vaillant, Baymak, Ferroli, Ariston, Bosch, Buderus, Protherm, Demirdöküm ve tüm markalar için bakım hizmeti.</p>
+            </div>
+            
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.1s;">
+                <div class="service-icon">
+                    <i class="ph-fill ph-snowflake"></i>
+                </div>
+                <h3>Klima Periyodik Bakımı</h3>
+                <p>İç ve dış ünite temizliği, filtre yıkama, gaz kontrolü, drenaj kontrolü. Daikin, Mitsubishi, LG, Samsung, Arçelik, Vestel, Airfel ve tüm markalar için profesyonel bakım.</p>
+            </div>
+            
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.2s;">
+                <div class="service-icon">
+                    <i class="ph-fill ph-wrench"></i>
+                </div>
+                <h3>Kombi Arıza Onarımı</h3>
+                <p>Kombi çalışmıyor, sıcak su vermiyor, hata kodu veriyor mu? Anında arıza tespiti ve onarım. Orijinal yedek parça garantisi ile hızlı çözüm.</p>
+            </div>
+            
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.3s;">
+                <div class="service-icon">
+                    <i class="ph-fill ph-thermometer-cold"></i>
+                </div>
+                <h3>Klima Gaz Dolumu</h3>
+                <p>Klima yeterince soğutmuyor mu? R32, R410A, R22 gaz dolumu ve kaçak tespiti. Basınç kontrolü ve performans testi dahil profesyonel gaz şarjı.</p>
+            </div>
+            
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.4s;">
+                <div class="service-icon">
+                    <i class="ph-fill ph-calendar-check"></i>
+                </div>
+                <h3>Yıllık Bakım Sözleşmesi</h3>
+                <p>Kombi ve klima cihazlarınız için yıllık periyodik bakım paketleri. İndirimli fiyatlar, öncelikli servis ve uzatılmış garanti avantajları.</p>
+            </div>
+            
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.5s;">
+                <div class="service-icon">
+                    <i class="ph-fill ph-shield-check"></i>
+                </div>
+                <h3>Garanti Bakımı</h3>
+                <p>Yetkili servisten garanti bakımı için yüksek ücret mi alındı? Biz uygun fiyata garantili periyodik bakım yapıyoruz. Sertifikalı teknik personel.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">2500+</div>
+                <div class="stat-label">Mutlu Müşteri</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">15+</div>
+                <div class="stat-label">Yıllık Tecrübe</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">7/24</div>
+                <div class="stat-label">Acil Servis</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">%100</div>
+                <div class="stat-label">Müşteri Memnuniyeti</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section">
+        <div class="section-header">
+            <h2>Çalıştığımız Kombi ve Klima Markaları</h2>
+            <p>Tüm marka ve modellerde uzman bakım ve onarım hizmeti</p>
+        </div>
+        <div class="brands-container">
+            <div class="brand-category">
+                <h3><i class="ph-fill ph-flame"></i> Kombi Markaları</h3>
+                <div class="brand-list">
+                    <span class="brand-tag">Vaillant</span>
+                    <span class="brand-tag">Baymak</span>
+                    <span class="brand-tag">Ferroli</span>
+                    <span class="brand-tag">Ariston</span>
+                    <span class="brand-tag">Bosch</span>
+                    <span class="brand-tag">Buderus</span>
+                    <span class="brand-tag">Protherm</span>
+                    <span class="brand-tag">Demirdöküm</span>
+                    <span class="brand-tag">Eca</span>
+                    <span class="brand-tag">Alarko</span>
+                    <span class="brand-tag">Viessmann</span>
+                    <span class="brand-tag">Immergas</span>
+                </div>
+            </div>
+            <div class="brand-category">
+                <h3><i class="ph-fill ph-snowflake"></i> Klima Markaları</h3>
+                <div class="brand-list">
+                    <span class="brand-tag">Daikin</span>
+                    <span class="brand-tag">Mitsubishi Electric</span>
+                    <span class="brand-tag">LG</span>
+                    <span class="brand-tag">Samsung</span>
+                    <span class="brand-tag">Arçelik</span>
+                    <span class="brand-tag">Vestel</span>
+                    <span class="brand-tag">Airfel</span>
+                    <span class="brand-tag">Midea</span>
+                    <span class="brand-tag">Toshiba</span>
+                    <span class="brand-tag">Fujitsu</span>
+                    <span class="brand-tag">Carrier</span>
+                    <span class="brand-tag">York</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas -->
+    <section class="service-areas">
+        <div class="section-header">
+            <h2>Antalya'da Kombi ve Klima Bakım Hizmet Bölgelerimiz</h2>
+            <p>Antalya'nın tüm merkez ilçelerinde hızlı servis garantisi</p>
+        </div>
+        <div class="areas-grid">
+            <div class="area-card">
+                <i class="ph-fill ph-map-pin"></i>
+                <h4>Muratpaşa</h4>
+                <p>Muratpaşa ilçesinde kombi ve klima bakım servisi</p>
+            </div>
+            <div class="area-card">
+                <i class="ph-fill ph-map-pin"></i>
+                <h4>Kepez</h4>
+                <p>Kepez bölgesinde profesyonel bakım hizmeti</p>
+            </div>
+            <div class="area-card">
+                <i class="ph-fill ph-map-pin"></i>
+                <h4>Konyaaltı</h4>
+                <p>Konyaaltı'nda garantili servis hizmeti</p>
+            </div>
+            <div class="area-card">
+                <i class="ph-fill ph-map-pin"></i>
+                <h4>Döşemealtı</h4>
+                <p>Döşemealtı'nda hızlı müdahale servisi</p>
+            </div>
+            <div class="area-card">
+                <i class="ph-fill ph-map-pin"></i>
+                <h4>Aksu</h4>
+                <p>Aksu ilçesinde uygun fiyatlı bakım</p>
+            </div>
+            <div class="area-card">
+                <i class="ph-fill ph-map-pin"></i>
+                <h4>Manavgat</h4>
+                <p>Manavgat'ta güvenilir teknik servis</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="section-header">
+            <h2>Sıkça Sorulan Sorular</h2>
+            <p>Kombi ve klima bakımı hakkında merak edilenler</p>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kombi ne zaman bakıma alınmalı?</h3>
+                    <i class="ph-bold ph-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Kombiler yılda en az bir kez, tercihen ısınma sezonundan önce (Eylül-Ekim aylarında) periyodik bakıma alınmalıdır. Düzenli bakım, cihazın verimli çalışmasını sağlar ve arıza riskini minimuma indirir.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Klima bakımı ne kadar sürer?</h3>
+                    <i class="ph-bold ph-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Standart bir split klima bakımı ortalama 45-60 dakika sürmektedir. Bu süre içerisinde iç ünite, dış ünite temizliği, filtre yıkama, gaz kontrolü ve genel performans testi yapılır.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Kombi bakımı fiyatları ne kadar?</h3>
+                    <i class="ph-bold ph-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Kombi bakım fiyatları marka, model ve cihazın durumuna göre değişiklik gösterir. Net fiyat teklifi için bizi arayabilirsiniz. Tüm fiyatlarımız piyasa ortalamasının altındadır.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Klima gaz dolumu ne zaman yapılır?</h3>
+                    <i class="ph-bold ph-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Klima yeterince soğutmuyorsa, dış ünite buzlanıyorsa veya anormal sesler çıkarıyorsa gaz eksikliği olabilir. Profesyonel kontrol sonrası gerekirse gaz dolumu yapılır. Normal şartlarda yıllarca gaz kaybı olmaz.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Hangi markalarda servis veriyorsunuz?</h3>
+                    <i class="ph-bold ph-caret-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Vaillant, Baymak, Ferroli, Ariston, Bosch, Daikin, Mitsubishi, LG, Samsung başta olmak üzere tüm kombi ve klima markalarında profesyonel bakım ve onarım hizmeti vermekteyiz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="iletisim">
+        <div class="cta-container">
+            <h2>Kombiniz veya Klimanız Bakıma mı İhtiyaç Duyuyor?</h2>
+            <p>Antalya'nın tüm ilçelerinde kombi ve klima bakım hizmeti. Ücretsiz keşif ve net fiyat teklifi için hemen arayın.</p>
+            <a href="tel:+905001234567" class="btn-white">
+                <i class="ph-bold ph-phone-call"></i> 0500 123 45 67
+            </a>
+            <div class="cta-info">
+                <div class="cta-info-item">
+                    <i class="ph-fill ph-map-pin-line"></i>
+                    <div class="cta-info-text">
+                        <strong>Hizmet Bölgesi</strong>
+                        <span>Antalya Geneli</span>
+                    </div>
+                </div>
+                <div class="cta-info-item">
+                    <i class="ph-fill ph-clock"></i>
+                    <div class="cta-info-text">
+                        <strong>Çalışma Saatleri</strong>
+                        <span>7/24 Acil Servis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Antalya Mekanik</h4>
+                <p>Antalya'da kombi bakımı ve klima bakımı konusunda 15 yıllık tecrübe ile profesyonel hizmet. Vaillant, Baymak, Ferroli, Daikin, Mitsubishi ve tüm markalar için uzman servis.</p>
+                <div class="footer-social">
+                    <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="ph-fill ph-twitter-logo"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Kombi Bakımı</h4>
+                <a href="#hizmetler">Vaillant Kombi Bakımı</a>
+                <a href="#hizmetler">Baymak Kombi Bakımı</a>
+                <a href="#hizmetler">Ferroli Kombi Bakımı</a>
+                <a href="#hizmetler">Ariston Kombi Bakımı</a>
+                <a href="#hizmetler">Bosch Kombi Bakımı</a>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Klima Bakımı</h4>
+                <a href="#hizmetler">Daikin Klima Bakımı</a>
+                <a href="#hizmetler">Mitsubishi Klima Bakımı</a>
+                <a href="#hizmetler">LG Klima Bakımı</a>
+                <a href="#hizmetler">Samsung Klima Bakımı</a>
+                <a href="#hizmetler">Klima Gaz Dolumu</a>
+            </div>
+            
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <p><i class="ph-fill ph-phone"></i> <strong>0500 123 45 67</strong></p>
+                <p><i class="ph-fill ph-envelope"></i> info@antalyamekanik.com.tr</p>
+                <p><i class="ph-fill ph-map-pin"></i> Antalya - Muratpaşa, Kepez, Konyaaltı, Döşemealtı, Aksu, Manavgat</p>
+                <p><i class="ph-fill ph-clock"></i> 7/24 Acil Servis</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2024 Antalya Mekanik - Kombi Bakımı & Klima Bakımı. Tüm hakları saklıdır. | <a href="#" style="color: var(--secondary);">Gizlilik Politikası</a> | <a href="#" style="color: var(--secondary);">Kullanım Koşulları</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+        
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.className = 'ph-bold ph-x';
+            } else {
+                icon.className = 'ph-bold ph-list';
+            }
+        });
+        
+        // Close menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = menuToggle.querySelector('i');
+                icon.className = 'ph-bold ph-list';
+            });
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Animate on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <!-- Schema.org Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Antalya Mekanik - Kombi ve Klima Bakımı",
+        "image": "https://antalyamekanik.com.tr/logo.jpg",
+        "description": "Antalya'da kombi bakımı ve klima bakımı hizmeti. Tüm markalar için profesyonel servis, uygun fiyat, garantili işçilik.",
+        "@id": "https://antalyamekanik.com.tr",
+        "url": "https://antalyamekanik.com.tr",
+        "telephone": "+905001234567",
+        "email": "info@antalyamekanik.com.tr",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Merkez",
+            "addressLocality": "Antalya",
+            "addressRegion": "Antalya",
+            "postalCode": "07000",
+            "addressCountry": "TR"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "36.8969",
+            "longitude": "30.7133"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "opens": "00:00",
+            "closes": "23:59"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Antalya"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Muratpaşa"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Kepez"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Konyaaltı"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Döşemealtı"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Aksu"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Manavgat"
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Kombi ve Klima Hizmetleri",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Kombi Periyodik Bakımı",
+                        "description": "Tüm marka kombiler için profesyonel periyodik bakım hizmeti"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Klima Periyodik Bakımı",
+                        "description": "Split ve VRF klimalar için temizlik ve bakım hizmeti"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Kombi Arıza Onarımı",
+                        "description": "Kombi arıza tespiti ve onarım hizmeti"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Klima Gaz Dolumu",
+                        "description": "R32, R410A, R22 klima gaz şarjı ve kaçak tespiti"
+                    }
+                }
+            ]
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "487",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Kombi ne zaman bakıma alınmalı?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kombiler yılda en az bir kez, tercihen ısınma sezonundan önce (Eylül-Ekim aylarında) periyodik bakıma alınmalıdır. Düzenli bakım, cihazın verimli çalışmasını sağlar ve arıza riskini minimuma indirir."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Klima bakımı ne kadar sürer?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Standart bir split klima bakımı ortalama 45-60 dakika sürmektedir. Bu süre içerisinde iç ünite, dış ünite temizliği, filtre yıkama, gaz kontrolü ve genel performans testi yapılır."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kombi bakımı fiyatları ne kadar?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Kombi bakım fiyatları marka, model ve cihazın durumuna göre değişiklik gösterir. Net fiyat teklifi için bizi arayabilirsiniz. Tüm fiyatlarımız piyasa ortalamasının altındadır."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Klima gaz dolumu ne zaman yapılır?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Klima yeterince soğutmuyorsa, dış ünite buzlanıyorsa veya anormal sesler çıkarıyorsa gaz eksikliği olabilir. Profesyonel kontrol sonrası gerekirse gaz dolumu yapılır. Normal şartlarda yıllarca gaz kaybı olmaz."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hangi markalarda servis veriyorsunuz?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Vaillant, Baymak, Ferroli, Ariston, Bosch, Daikin, Mitsubishi, LG, Samsung başta olmak üzere tüm kombi ve klima markalarında profesyonel bakım ve onarım hizmeti vermekteyiz."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Kombi Bakımı ve Klima Bakımı",
+        "provider": {
+            "@type": "LocalBusiness",
+            "name": "Antalya Mekanik",
+            "telephone": "+905001234567",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Antalya",
+                "addressCountry": "TR"
+            }
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "Antalya"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Kombi ve Klima Bakım Hizmetleri",
+            "itemListElement": [
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Kombi Bakım Hizmetleri",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Vaillant Kombi Bakımı",
+                                "provider": {
+                                    "@type": "LocalBusiness",
+                                    "name": "Antalya Mekanik"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Baymak Kombi Bakımı",
+                                "provider": {
+                                    "@type": "LocalBusiness",
+                                    "name": "Antalya Mekanik"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Ferroli Kombi Bakımı",
+                                "provider": {
+                                    "@type": "LocalBusiness",
+                                    "name": "Antalya Mekanik"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "@type": "OfferCatalog",
+                    "name": "Klima Bakım Hizmetleri",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Daikin Klima Bakımı",
+                                "provider": {
+                                    "@type": "LocalBusiness",
+                                    "name": "Antalya Mekanik"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Mitsubishi Klima Bakımı",
+                                "provider": {
+                                    "@type": "LocalBusiness",
+                                    "name": "Antalya Mekanik"
+                                }
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "LG Klima Bakımı",
+                                "provider": {
+                                    "@type": "LocalBusiness",
+                                    "name": "Antalya Mekanik"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Ana Sayfa",
+                "item": "https://antalyamekanik.com.tr"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Kombi Bakımı",
+                "item": "https://antalyamekanik.com.tr#hizmetler"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Klima Bakımı",
+                "item": "https://antalyamekanik.com.tr#hizmetler"
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
