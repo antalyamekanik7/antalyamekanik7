@@ -11,6 +11,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://antalyamekanik.com.tr">
     <meta property="og:image" content="https://antalyamekanik.com.tr/og-image.jpg">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     
     <link rel="canonical" href="https://antalyamekanik.com.tr">
     
@@ -20,897 +21,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Rubik:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="assets/css/style.css">
     <!-- Icons - Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web@2.0.3"></script>
     
-    <style>
-        :root {
-            --primary: #0A4D8C;
-            --primary-dark: #083A6B;
-            --secondary: #FF6B35;
-            --secondary-dark: #E5511F;
-            --accent: #00BCD4;
-            --dark: #1A1A2E;
-            --gray: #6B7280;
-            --light-gray: #F3F4F6;
-            --white: #FFFFFF;
-            --shadow: rgba(10, 77, 140, 0.15);
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        html {
-            scroll-behavior: smooth;
-        }
-        
-        body {
-            font-family: 'Rubik', sans-serif;
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Barlow', sans-serif;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        /* Header */
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px var(--shadow);
-            z-index: 1000;
-            transition: all 0.3s ease;
-        }
-        
-        .header.scrolled {
-            box-shadow: 0 4px 30px var(--shadow);
-        }
-        
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .logo i {
-            color: var(--secondary);
-            font-size: 2rem;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
-        
-        .nav-menu a {
-            color: var(--dark);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-            position: relative;
-            display: flex;
-            align-items: center;
-            gap: 0.4rem;
-        }
-        
-        .nav-menu a i {
-            font-size: 1.1rem;
-        }
-        
-        .nav-menu a:hover {
-            color: var(--primary);
-        }
-        
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--secondary);
-            transition: width 0.3s ease;
-        }
-        
-        .nav-menu a:hover::after {
-            width: 100%;
-        }
-        
-        .cta-button {
-            background: var(--secondary);
-            color: var(--white);
-            padding: 0.8rem 1.8rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-        
-        .cta-button:hover {
-            background: var(--secondary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
-            color: var(--white);
-        }
-        
-        .menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--primary);
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            margin-top: 80px;
-            min-height: 90vh;
-            background: linear-gradient(135deg, #0A4D8C 0%, #083A6B 100%);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 50%, rgba(0, 188, 212, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 107, 53, 0.15) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
-        .hero-pattern {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            opacity: 0.05;
-            background-image: 
-                repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.1) 35px, rgba(255,255,255,.1) 70px);
-        }
-        
-        .hero-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.5rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-            line-height: 1.1;
-        }
-        
-        .hero-content .highlight {
-            color: var(--secondary);
-        }
-        
-        .hero-content p {
-            font-size: 1.3rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-        
-        .btn-primary, .btn-secondary {
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.1rem;
-        }
-        
-        .btn-primary {
-            background: var(--secondary);
-            color: var(--white);
-            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
-        }
-        
-        .btn-primary:hover {
-            background: var(--secondary-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(255, 107, 53, 0.5);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
-        }
-        
-        .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary);
-        }
-        
-        .hero-image {
-            position: relative;
-        }
-        
-        .hero-image-placeholder {
-            width: 100%;
-            height: 500px;
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-            border-radius: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-        }
-        
-        .hero-image-placeholder i {
-            font-size: 5rem;
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        /* Features Grid */
-        .features {
-            padding: 5rem 2rem;
-            background: var(--light-gray);
-        }
-        
-        .section-header {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto 4rem;
-        }
-        
-        .section-header h2 {
-            font-size: 2.8rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--gray);
-        }
-        
-        .features-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .feature-card {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px var(--shadow);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .feature-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 40px var(--shadow);
-        }
-        
-        .feature-card:hover::before {
-            transform: scaleX(1);
-        }
-        
-        .feature-icon {
-            width: 70px;
-            height: 70px;
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            color: var(--white);
-        }
-        
-        .feature-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-        
-        .feature-card p {
-            color: var(--gray);
-            line-height: 1.8;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 5rem 2rem;
-            background: var(--white);
-        }
-        
-        .services-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-        
-        .service-card {
-            text-align: center;
-            padding: 2rem;
-            border-radius: 15px;
-            transition: all 0.3s ease;
-        }
-        
-        .service-card:hover {
-            background: var(--light-gray);
-        }
-        
-        .service-icon {
-            width: 90px;
-            height: 90px;
-            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2.5rem;
-            color: var(--white);
-            box-shadow: 0 4px 20px rgba(255, 107, 53, 0.3);
-        }
-        
-        .service-card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-        
-        .service-card p {
-            color: var(--gray);
-            line-height: 1.7;
-        }
-        
-        /* Stats Section */
-        .stats {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            padding: 4rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .stats::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 30% 50%, rgba(0, 188, 212, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 70% 50%, rgba(255, 107, 53, 0.2) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
-        .stats-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 3rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .stat-item {
-            text-align: center;
-            color: var(--white);
-        }
-        
-        .stat-number {
-            font-size: 3.5rem;
-            font-weight: 800;
-            color: var(--secondary);
-            margin-bottom: 0.5rem;
-            font-family: 'Barlow', sans-serif;
-        }
-        
-        .stat-label {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            padding: 5rem 2rem;
-            background: var(--light-gray);
-        }
-        
-        .cta-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: linear-gradient(135deg, var(--secondary), var(--secondary-dark));
-            padding: 4rem 3rem;
-            border-radius: 30px;
-            text-align: center;
-            box-shadow: 0 10px 50px rgba(255, 107, 53, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .cta-container::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -50%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
-            pointer-events: none;
-        }
-        
-        .cta-container h2 {
-            font-size: 2.5rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-container p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-info {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .cta-info-item {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            color: var(--white);
-        }
-        
-        .cta-info-item i {
-            font-size: 2rem;
-        }
-        
-        .cta-info-text strong {
-            display: block;
-            font-size: 1.1rem;
-            margin-bottom: 0.2rem;
-        }
-        
-        .btn-white {
-            background: var(--white);
-            color: var(--secondary);
-            padding: 1rem 2.5rem;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
-        }
-        
-        .btn-white:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 3rem 2rem 1.5rem;
-        }
-
-        /* Brands Section */
-        .brands-section {
-            padding: 4rem 2rem;
-            background: var(--white);
-        }
-
-        .brands-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 3rem;
-        }
-
-        .brand-category h3 {
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-            font-size: 1.6rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid var(--light-gray);
-        }
-
-        .brand-category h3 i {
-            color: var(--secondary);
-            font-size: 1.8rem;
-        }
-
-        .brand-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.8rem;
-        }
-
-        .brand-tag {
-            background: var(--light-gray);
-            padding: 0.6rem 1.2rem;
-            border-radius: 25px;
-            font-weight: 500;
-            color: var(--dark);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .brand-tag:hover {
-            background: var(--primary);
-            color: var(--white);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px var(--shadow);
-        }
-
-        /* Service Areas */
-        .service-areas {
-            padding: 4rem 2rem;
-            background: var(--light-gray);
-        }
-
-        .areas-grid {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .area-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .area-card:hover {
-            border-color: var(--secondary);
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px var(--shadow);
-        }
-
-        .area-card i {
-            font-size: 2.5rem;
-            color: var(--secondary);
-            margin-bottom: 1rem;
-        }
-
-        .area-card h4 {
-            font-size: 1.3rem;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-
-        .area-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-        }
-
-        /* FAQ Section */
-        .faq-section {
-            padding: 4rem 2rem;
-            background: var(--white);
-        }
-
-        .faq-container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .faq-item {
-            background: var(--light-gray);
-            margin-bottom: 1rem;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        .faq-item:hover {
-            box-shadow: 0 4px 15px var(--shadow);
-        }
-
-        .faq-question {
-            padding: 1.5rem 2rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--white);
-            user-select: none;
-        }
-
-        .faq-question h3 {
-            font-size: 1.15rem;
-            color: var(--dark);
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .faq-question i {
-            color: var(--secondary);
-            transition: transform 0.3s ease;
-            font-size: 1.2rem;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-            background: var(--light-gray);
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-            padding: 1.5rem 2rem;
-        }
-
-        .faq-answer p {
-            color: var(--gray);
-            line-height: 1.8;
-            margin: 0;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--dark);
-            color: rgba(255, 255, 255, 0.8);
-            padding: 3rem 2rem 1.5rem;
-        }
-        
-        .footer-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-col h4 {
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .footer-col p, .footer-col a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            display: block;
-            margin-bottom: 0.8rem;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-col a:hover {
-            color: var(--secondary);
-        }
-        
-        .footer-social {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1rem;
-        }
-        
-        .footer-social a {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-social a:hover {
-            background: var(--secondary);
-            transform: translateY(-3px);
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-on-scroll {
-            animation: fadeInUp 0.8s ease forwards;
-            opacity: 0;
-        }
-        
-        /* Responsive */
-        @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero-buttons {
-                justify-content: center;
-            }
-            
-            .hero-image {
-                order: -1;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-menu {
-                position: fixed;
-                top: 80px;
-                left: -100%;
-                flex-direction: column;
-                background: var(--white);
-                width: 100%;
-                padding: 2rem;
-                box-shadow: 0 4px 20px var(--shadow);
-                transition: left 0.3s ease;
-                gap: 1.5rem;
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
-            
-            .hero-content h1 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-content p {
-                font-size: 1.1rem;
-            }
-            
-            .section-header h2 {
-                font-size: 2.2rem;
-            }
-            
-            .features-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-container {
-                padding: 3rem 2rem;
-            }
-            
-            .cta-container h2 {
-                font-size: 2rem;
-            }
-            
-            .cta-info {
-                flex-direction: column;
-                gap: 1.5rem;
-            }
-
-            .brands-container {
-                grid-template-columns: 1fr;
-            }
-
-            .areas-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+   
 </head>
 <body>
     <!-- Header -->
@@ -961,113 +76,188 @@
     <!-- Features Section -->
     <section class="features" id="ozellikler">
         <div class="section-header">
-            <h2>Kombi ve Klima Bakımında Neden Biz?</h2>
-            <p>Antalya'da kombi ve klima bakımı konusunda güvenilir ve profesyonel hizmet</p>
+            <h2>Antalya Kombi ve Klima Bakımında Neden Biz?</h2>
+            <p>Antalya kombi bakımı ve Antalya klima bakımı için en çok tercih edilen servis olma nedenlerimiz: 12 ayrı avantaj, SEO odaklı anahtar kelimeler ve müşteri memnuniyetine dayalı pazarlama teknikleriyle güçlendirilmiş hizmet!</p>
         </div>
         <div class="features-grid">
             <div class="feature-card animate-on-scroll">
-                <div class="feature-icon">
-                    <i class="ph-fill ph-medal"></i>
-                </div>
-                <h3>Tecrübeli Ekip</h3>
-                <p>Antalya'da HVAC sektöründe hizmet veren uzman ekibimizle her türlü klima ve havalandırma sistemi ihtiyacınıza profesyonel çözümler sunuyoruz.</p>
+                <div class="feature-icon"><i class="ph-fill ph-medal"></i></div>
+                <h3>Antalya Kombi Bakımı Uzmanı</h3>
+                <p>Antalya kombi bakımı alanında sertifikalı ve tecrübeli ekip ile güvenilir servis.</p>
             </div>
-            
             <div class="feature-card animate-on-scroll" style="animation-delay: 0.1s;">
-                <div class="feature-icon">
-                    <i class="ph-fill ph-clock-afternoon"></i>
-                </div>
-                <h3>7/24 Acil Servis</h3>
-                <p>Hafta sonları ve resmi tatiller dahil günün her saati ulaşabileceğiniz acil servis hattımızla yanınızdayız. Arızalarınıza hızlı müdahale garantisi.</p>
+                <div class="feature-icon"><i class="ph-fill ph-snowflake"></i></div>
+                <h3>Antalya Klima Bakımı Uzmanı</h3>
+                <p>Antalya klima bakımı için profesyonel ve hızlı hizmet, tüm marka ve modellerde uzmanlık.</p>
             </div>
-            
             <div class="feature-card animate-on-scroll" style="animation-delay: 0.2s;">
-                <div class="feature-icon">
-                    <i class="ph-fill ph-seal-check"></i>
-                </div>
-                <h3>Garantili İşçilik</h3>
-                <p>Tüm bakım ve onarım hizmetlerimizde uzun süreli işçilik garantisi. Orijinal yedek parça kullanımı ve kalite taahhüdü.</p>
+                <div class="feature-icon"><i class="ph-fill ph-clock-afternoon"></i></div>
+                <h3>7/24 Acil Kombi ve Klima Servisi</h3>
+                <p>Hafta sonu ve resmi tatillerde dahi Antalya kombi ve klima acil servis desteği.</p>
             </div>
-            
             <div class="feature-card animate-on-scroll" style="animation-delay: 0.3s;">
-                <div class="feature-icon">
-                    <i class="ph-fill ph-currency-circle-dollar"></i>
-                </div>
-                <h3>Uygun Fiyat</h3>
-                <p>Şeffaf fiyatlandırma politikası ve piyasa koşullarına uygun rekabetçi fiyatlar. Gizli maliyet yok, net fiyat teklifi.</p>
+                <div class="feature-icon"><i class="ph-fill ph-seal-check"></i></div>
+                <h3>Garantili İşçilik ve Orijinal Parça</h3>
+                <p>Her bakım ve onarımda uzun süreli işçilik garantisi ve orijinal yedek parça kullanımı.</p>
             </div>
-            
             <div class="feature-card animate-on-scroll" style="animation-delay: 0.4s;">
-                <div class="feature-icon">
-                    <i class="ph-fill ph-users-three"></i>
-                </div>
-                <h3>Profesyonel Ekip</h3>
-                <p>Sertifikalı ve sürekli eğitimli teknik personelimiz, son model teşhis ve tamir ekipmanlarıyla hizmetinizdedir.</p>
+                <div class="feature-icon"><i class="ph-fill ph-currency-circle-dollar"></i></div>
+                <h3>Uygun Fiyat ve Şeffaf Teklif</h3>
+                <p>Antalya kombi ve klima bakımı için rekabetçi fiyatlar, gizli maliyet yok, net fiyat teklifi.</p>
             </div>
-            
             <div class="feature-card animate-on-scroll" style="animation-delay: 0.5s;">
-                <div class="feature-icon">
-                    <i class="ph-fill ph-leaf"></i>
-                </div>
-                <h3>Çevre Dostu</h3>
-                <p>Enerji verimliliği ve çevre dostu uygulamalarla hem doğayı hem de cebinizi koruyan çözümler sunuyoruz.</p>
+                <div class="feature-icon"><i class="ph-fill ph-users-three"></i></div>
+                <h3>Profesyonel ve Sürekli Eğitimli Ekip</h3>
+                <p>Teknik personelimiz sürekli eğitimlerle güncel bilgiye sahip, müşteri memnuniyetine odaklı.</p>
+            </div>
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.6s;">
+                <div class="feature-icon"><i class="ph-fill ph-leaf"></i></div>
+                <h3>Çevre Dostu ve Enerji Verimli Çözümler</h3>
+                <p>Enerji tasarrufu sağlayan, çevreye duyarlı kombi ve klima bakım uygulamaları.</p>
+            </div>
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.7s;">
+                <div class="feature-icon"><i class="ph-fill ph-lightning"></i></div>
+                <h3>Hızlı Arıza Tespiti ve Onarım</h3>
+                <p>Kombi ve klima arızalarında hızlı tespit, anında çözüm ve garantili onarım.</p>
+            </div>
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.8s;">
+                <div class="feature-icon"><i class="ph-fill ph-map-pin"></i></div>
+                <h3>Antalya'nın Her İlçesinde Servis</h3>
+                <p>Muratpaşa, Kepez, Konyaaltı, Döşemealtı, Aksu, Manavgat ve tüm Antalya ilçelerinde hızlı servis.</p>
+            </div>
+            <div class="feature-card animate-on-scroll" style="animation-delay: 0.9s;">
+                <div class="feature-icon"><i class="ph-fill ph-phone"></i></div>
+                <h3>Ücretsiz Keşif ve Danışmanlık</h3>
+                <p>Kombi ve klima bakımı öncesi ücretsiz keşif ve uzman danışmanlık hizmeti.</p>
+            </div>
+            <div class="feature-card animate-on-scroll" style="animation-delay: 1.0s;">
+                <div class="feature-icon"><i class="ph-fill ph-star"></i></div>
+                <h3>%100 Müşteri Memnuniyeti</h3>
+                <p>Antalya kombi ve klima bakımı sonrası memnuniyet garantisi, referanslı müşteri portföyü.</p>
+            </div>
+            <div class="feature-card animate-on-scroll" style="animation-delay: 1.1s;">
+                <div class="feature-icon"><i class="ph-fill ph-calendar-check"></i></div>
+                <h3>Yıllık Bakım Sözleşmesi Avantajı</h3>
+                <p>Kombi ve klima cihazlarınız için yıllık bakım sözleşmesi ile indirimli fiyat ve öncelikli servis.</p>
             </div>
         </div>
+
+        <!-- SEO ve Pazarlama Odaklı Text Alanları -->
+        <section class="seo-info-section" style="margin-top:40px;margin-bottom: 10px;padding:4rem 2rem;background:#fff;">
+            <div class="section-header">
+                <h2>Antalya’da Kombi ve Klima Bakımı Hakkında Bilmeniz Gerekenler</h2>
+                <p>Antalya kombi bakımı ve Antalya klima bakımı hizmetlerinde doğru bilgiye ulaşmak, cihazlarınızın ömrünü uzatır ve enerji tasarrufu sağlar. Kombi ve klima bakımı neden gereklidir, hangi aralıklarla yapılmalıdır ve profesyonel servis seçerken nelere dikkat edilmelidir? Tüm detaylar aşağıda!</p>
+            </div>
+            <div style="max-width:900px;margin:0 auto;font-size:1.1rem;color:#333;line-height:1.8;">
+                <ul style="margin-bottom:2rem;">
+                    <li><strong>Kombi bakımı</strong> yılda en az bir kez yapılmalı, özellikle kış öncesi tercih edilmelidir.</li>
+                    <li><strong>Klima bakımı</strong> ise yaz öncesi ve sonrası olmak üzere yılda iki kez önerilir.</li>
+                    <li>Antalya’da nem ve sıcaklık nedeniyle klima bakımı daha sık gerekebilir.</li>
+                    <li>Bakım sırasında filtre temizliği, gaz kontrolü, elektriksel kontroller ve genel performans testi yapılır.</li>
+                    <li>Profesyonel servis seçerken sertifikalı ve referanslı ekip tercih edilmelidir.</li>
+                    <li>Bakım işlemleri enerji tasarrufu sağlar, arıza riskini azaltır ve cihaz ömrünü uzatır.</li>
+                    <li>Antalya kombi bakımı ve klima bakımı için uygun fiyat ve garantili işçilik sunan firmalar öne çıkar.</li>
+                    <li>Bakım sonrası cihaz performansı artar, faturalar düşer.</li>
+                    <li>Servis sonrası müşteri memnuniyeti ve referanslar önemlidir.</li>
+                    <li>Bakımda orijinal yedek parça kullanımı cihaz sağlığı için kritiktir.</li>
+                    <li>Antalya’da kombi ve klima bakımı için 7/24 acil servis avantajı sunan firmalar tercih edilmelidir.</li>
+                    <li>Yıllık bakım sözleşmesi ile hem ekonomik hem de öncelikli servis avantajı elde edilir.</li>
+                </ul>
+                <p>Antalya kombi bakımı ve Antalya klima bakımı için hemen <a href="#iletisim" style="color:var(--primary);font-weight:600;">uzman ekibimize ulaşın</a>, ücretsiz keşif ve net fiyat teklifi alın!</p>
+            </div>
+        </section>
+
+        <section class="seo-tips-section" style="padding:4rem 2rem;background:#F3F4F6;">
+            <div class="section-header">
+                <h2>Kombi ve Klima Bakımında Uzman Tavsiyeler</h2>
+                <p>Antalya kombi bakımı ve klima bakımı hakkında sık sorulan soruların ötesinde, cihazlarınızın uzun ömürlü ve verimli çalışması için uzman önerilerimiz:</p>
+            </div>
+            <div style="max-width:900px;margin:0 auto;font-size:1.1rem;color:#333;line-height:1.8;">
+                <ul style="margin-bottom:2rem;">
+                    <li>Kombi ve klima bakımı için mutlaka profesyonel servis tercih edin.</li>
+                    <li>Bakım sırasında cihazın tüm fonksiyonları test edilmeli, arıza tespiti yapılmalıdır.</li>
+                    <li>Filtre ve drenaj temizliği, gaz dolumu ve elektriksel kontroller ihmal edilmemelidir.</li>
+                    <li>Antalya kombi bakımı ve klima bakımı için referanslı ve müşteri memnuniyeti yüksek firmaları seçin.</li>
+                    <li>Bakım sonrası cihaz performansını gözlemleyin, faturalarınızda düşüş bekleyin.</li>
+                    <li>Yıllık bakım sözleşmesi ile ekonomik avantaj ve öncelikli servis hakkı elde edin.</li>
+                    <li>Bakımda orijinal yedek parça kullanımı cihaz sağlığı için önemlidir.</li>
+                    <li>Servis sonrası garanti ve işçilik belgesi talep edin.</li>
+                    <li>Antalya’da kombi ve klima bakımı için 7/24 acil servis avantajı sunan firmaları tercih edin.</li>
+                    <li>Bakım işlemlerini ihmal etmeyin, cihaz ömrünü uzatın.</li>
+                    <li>Her marka ve model için uzman servis seçimi yapın.</li>
+                    <li>Antalya kombi bakımı ve klima bakımı için hemen iletişime geçin, ücretsiz keşif ve fiyat teklifi alın.</li>
+                </ul>
+                <p>Detaylı bilgi ve uzman tavsiyesi için <a href="#iletisim" style="color:var(--secondary);font-weight:600;">bizimle iletişime geçin</a>.</p>
+            </div>
+        </section>
     </section>
 
     <!-- Services Section -->
     <section class="services" id="hizmetler">
         <div class="section-header">
-            <h2>Kombi ve Klima Bakım Hizmetlerimiz</h2>
-            <p>Antalya genelinde tüm marka ve model kombi ve klimalar için profesyonel hizmet</p>
+            <h2>Antalya Kombi Bakımı ve Klima Bakımı Hizmetlerimiz</h2>
+            <p>Antalya kombi bakımı ve Antalya klima bakımı alanında 12 farklı hizmet ile tüm marka ve modellerde uzman servis sunuyoruz. Kombi ve klima bakımında rekabetçi fiyat, garantili işçilik ve hızlı servis avantajı!</p>
         </div>
         <div class="services-grid">
             <div class="service-card animate-on-scroll">
-                <div class="service-icon">
-                    <i class="ph-fill ph-fire"></i>
-                </div>
-                <h3>Kombi Periyodik Bakımı</h3>
-                <p>Kombi temizliği, baca kontrolü, yanma analizi, emniyetlerin kontrolü. Vaillant, Baymak, Ferroli, Ariston, Bosch, Buderus, Protherm, Demirdöküm ve tüm markalar için bakım hizmeti.</p>
+                <div class="service-icon"><i class="ph-fill ph-fire"></i></div>
+                <h3>Antalya Kombi Periyodik Bakımı</h3>
+                <p>Antalya kombi bakımı için temizlik, baca kontrolü, yanma analizi ve emniyet kontrolleri. Tüm marka kombilerde uzman servis.</p>
             </div>
-            
             <div class="service-card animate-on-scroll" style="animation-delay: 0.1s;">
-                <div class="service-icon">
-                    <i class="ph-fill ph-snowflake"></i>
-                </div>
-                <h3>Klima Periyodik Bakımı</h3>
-                <p>İç ve dış ünite temizliği, filtre yıkama, gaz kontrolü, drenaj kontrolü. Daikin, Mitsubishi, LG, Samsung, Arçelik, Vestel, Airfel ve tüm markalar için profesyonel bakım.</p>
+                <div class="service-icon"><i class="ph-fill ph-snowflake"></i></div>
+                <h3>Antalya Klima Periyodik Bakımı</h3>
+                <p>Antalya klima bakımı için iç/dış ünite temizliği, filtre yıkama, gaz kontrolü ve drenaj kontrolü. Tüm marka klimalar için profesyonel bakım.</p>
             </div>
-            
             <div class="service-card animate-on-scroll" style="animation-delay: 0.2s;">
-                <div class="service-icon">
-                    <i class="ph-fill ph-wrench"></i>
-                </div>
+                <div class="service-icon"><i class="ph-fill ph-wrench"></i></div>
                 <h3>Kombi Arıza Onarımı</h3>
-                <p>Kombi çalışmıyor, sıcak su vermiyor, hata kodu veriyor mu? Anında arıza tespiti ve onarım. Orijinal yedek parça garantisi ile hızlı çözüm.</p>
+                <p>Kombi arızalarında hızlı tespit ve onarım. Orijinal yedek parça garantisi ile Antalya'da güvenilir kombi servisi.</p>
             </div>
-            
             <div class="service-card animate-on-scroll" style="animation-delay: 0.3s;">
-                <div class="service-icon">
-                    <i class="ph-fill ph-thermometer-cold"></i>
-                </div>
-                <h3>Klima Gaz Dolumu</h3>
-                <p>Klima yeterince soğutmuyor mu? R32, R410A, R22 gaz dolumu ve kaçak tespiti. Basınç kontrolü ve performans testi dahil profesyonel gaz şarjı.</p>
+                <div class="service-icon"><i class="ph-fill ph-thermometer-cold"></i></div>
+                <h3>Klima Gaz Dolumu & Kaçak Tespiti</h3>
+                <p>Klima gaz dolumu, kaçak tespiti ve basınç kontrolü. Antalya klima gaz dolumu hizmeti ile maksimum performans.</p>
             </div>
-            
             <div class="service-card animate-on-scroll" style="animation-delay: 0.4s;">
-                <div class="service-icon">
-                    <i class="ph-fill ph-calendar-check"></i>
-                </div>
-                <h3>Yıllık Bakım Sözleşmesi</h3>
-                <p>Kombi ve klima cihazlarınız için yıllık periyodik bakım paketleri. İndirimli fiyatlar, öncelikli servis ve uzatılmış garanti avantajları.</p>
+                <div class="service-icon"><i class="ph-fill ph-calendar-check"></i></div>
+                <h3>Yıllık Kombi Bakım Sözleşmesi</h3>
+                <p>Kombi cihazlarınız için yıllık bakım paketleri. Antalya kombi bakımında indirimli fiyat ve öncelikli servis.</p>
             </div>
-            
             <div class="service-card animate-on-scroll" style="animation-delay: 0.5s;">
-                <div class="service-icon">
-                    <i class="ph-fill ph-shield-check"></i>
-                </div>
-                <h3>Garanti Bakımı</h3>
-                <p>Yetkili servisten garanti bakımı için yüksek ücret mi alındı? Biz uygun fiyata garantili periyodik bakım yapıyoruz. Sertifikalı teknik personel.</p>
+                <div class="service-icon"><i class="ph-fill ph-shield-check"></i></div>
+                <h3>Garantili Klima Bakımı</h3>
+                <p>Antalya klima bakımı için garantili işçilik ve sertifikalı teknik personel. Uygun fiyatlı periyodik bakım.</p>
+            </div>
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.6s;">
+                <div class="service-icon"><i class="ph-fill ph-lightning"></i></div>
+                <h3>Kombi Elektriksel Kontrol</h3>
+                <p>Kombi elektrik bağlantıları, kart ve sensör kontrolleri. Antalya kombi elektriksel arıza tespiti.</p>
+            </div>
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.7s;">
+                <div class="service-icon"><i class="ph-fill ph-drop"></i></div>
+                <h3>Klima Drenaj Temizliği</h3>
+                <p>Klima drenaj hattı temizliği ve tıkanıklık giderme. Antalya klima drenaj bakımı ile sorunsuz kullanım.</p>
+            </div>
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.8s;">
+                <div class="service-icon"><i class="ph-fill ph-gear"></i></div>
+                <h3>Kombi Parça Değişimi</h3>
+                <p>Kombi pompa, vana, sensör ve kart değişimi. Antalya kombi parça değişimi garantili servis.</p>
+            </div>
+            <div class="service-card animate-on-scroll" style="animation-delay: 0.9s;">
+                <div class="service-icon"><i class="ph-fill ph-wind"></i></div>
+                <h3>Klima Fan ve Motor Bakımı</h3>
+                <p>Klima fan ve motor bakımı, performans artırıcı servis. Antalya klima fan bakımı ile sessiz ve verimli çalışma.</p>
+            </div>
+            <div class="service-card animate-on-scroll" style="animation-delay: 1.0s;">
+                <div class="service-icon"><i class="ph-fill ph-flame"></i></div>
+                <h3>Kombi Petek Temizliği</h3>
+                <p>Kombi petek temizliği ile maksimum ısı verimi. Antalya kombi petek temizliği ve sistem bakımı.</p>
+            </div>
+            <div class="service-card animate-on-scroll" style="animation-delay: 1.1s;">
+                <div class="service-icon"><i class="ph-fill ph-certificate"></i></div>
+                <h3>Klima Montaj ve Demontaj</h3>
+                <p>Klima montajı, demontajı ve yer değişimi. Antalya klima montaj hizmeti ile güvenli kurulum.</p>
             </div>
         </div>
     </section>
@@ -1182,57 +372,53 @@
     <section class="faq-section">
         <div class="section-header">
             <h2>Sıkça Sorulan Sorular</h2>
-            <p>Kombi ve klima bakımı hakkında merak edilenler</p>
+            <p>Antalya kombi bakımı ve Antalya klima bakımı hakkında en çok merak edilen sorular ve uzman cevapları. Zengin arama sonuçları için optimize edilmiştir.</p>
         </div>
         <div class="faq-container">
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Kombi ne zaman bakıma alınmalı?</h3>
-                    <i class="ph-bold ph-caret-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Kombiler yılda en az bir kez, tercihen ısınma sezonundan önce (Eylül-Ekim aylarında) periyodik bakıma alınmalıdır. Düzenli bakım, cihazın verimli çalışmasını sağlar ve arıza riskini minimuma indirir.</p>
-                </div>
+                <div class="faq-question"><h3>Kombi ne zaman bakıma alınmalı?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Kombiler yılda en az bir kez, tercihen ısınma sezonundan önce (Eylül-Ekim aylarında) periyodik bakıma alınmalıdır. Düzenli bakım, cihazın verimli çalışmasını sağlar ve arıza riskini minimuma indirir.</p></div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Klima bakımı ne kadar sürer?</h3>
-                    <i class="ph-bold ph-caret-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Standart bir split klima bakımı ortalama 45-60 dakika sürmektedir. Bu süre içerisinde iç ünite, dış ünite temizliği, filtre yıkama, gaz kontrolü ve genel performans testi yapılır.</p>
-                </div>
+                <div class="faq-question"><h3>Klima bakımı ne kadar sürer?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Standart bir split klima bakımı ortalama 45-60 dakika sürmektedir. Bu süre içerisinde iç ünite, dış ünite temizliği, filtre yıkama, gaz kontrolü ve genel performans testi yapılır.</p></div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Kombi bakımı fiyatları ne kadar?</h3>
-                    <i class="ph-bold ph-caret-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Kombi bakım fiyatları marka, model ve cihazın durumuna göre değişiklik gösterir. Net fiyat teklifi için bizi arayabilirsiniz. Tüm fiyatlarımız piyasa ortalamasının altındadır.</p>
-                </div>
+                <div class="faq-question"><h3>Kombi bakımı fiyatları ne kadar?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Kombi bakım fiyatları marka, model ve cihazın durumuna göre değişiklik gösterir. Net fiyat teklifi için bizi arayabilirsiniz. Tüm fiyatlarımız piyasa ortalamasının altındadır.</p></div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Klima gaz dolumu ne zaman yapılır?</h3>
-                    <i class="ph-bold ph-caret-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Klima yeterince soğutmuyorsa, dış ünite buzlanıyorsa veya anormal sesler çıkarıyorsa gaz eksikliği olabilir. Profesyonel kontrol sonrası gerekirse gaz dolumu yapılır. Normal şartlarda yıllarca gaz kaybı olmaz.</p>
-                </div>
+                <div class="faq-question"><h3>Klima gaz dolumu ne zaman yapılır?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Klima yeterince soğutmuyorsa, dış ünite buzlanıyorsa veya anormal sesler çıkarıyorsa gaz eksikliği olabilir. Profesyonel kontrol sonrası gerekirse gaz dolumu yapılır. Normal şartlarda yıllarca gaz kaybı olmaz.</p></div>
             </div>
-            
             <div class="faq-item">
-                <div class="faq-question">
-                    <h3>Hangi markalarda servis veriyorsunuz?</h3>
-                    <i class="ph-bold ph-caret-down"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Vaillant, Baymak, Ferroli, Ariston, Bosch, Daikin, Mitsubishi, LG, Samsung başta olmak üzere tüm kombi ve klima markalarında profesyonel bakım ve onarım hizmeti vermekteyiz.</p>
-                </div>
+                <div class="faq-question"><h3>Hangi markalarda servis veriyorsunuz?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Vaillant, Baymak, Ferroli, Ariston, Bosch, Daikin, Mitsubishi, LG, Samsung başta olmak üzere tüm kombi ve klima markalarında profesyonel bakım ve onarım hizmeti vermekteyiz.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h3>Kombi bakımı neden önemlidir?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Kombi bakımı enerji tasarrufu sağlar, arıza riskini azaltır ve cihaz ömrünü uzatır. Antalya kombi bakımı ile güvenli ve verimli kullanım elde edersiniz.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h3>Klima bakımı hangi aralıklarla yapılmalı?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Klima bakımı yaz öncesi ve sonrası olmak üzere yılda iki kez yapılmalıdır. Antalya klima bakımı ile cihazınızın performansı artar.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h3>Kombi ve klima bakımı için hangi servisi seçmeliyim?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Sertifikalı, referanslı ve müşteri memnuniyeti yüksek Antalya kombi ve klima bakımı servislerini tercih edin.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h3>Bakımda hangi işlemler yapılır?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Filtre temizliği, gaz kontrolü, elektriksel kontroller, performans testi ve orijinal yedek parça kullanımı yapılır.</p></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question"><h3>Antalya'da 7/24 acil servis var mı?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Evet, Antalya kombi ve klima bakımı için 7/24 acil servis desteği sunuyoruz.</p></div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question"><h3>Yıllık bakım sözleşmesi avantajları nelerdir?</h3><i class="ph-bold ph-caret-down"></i></div>
+                <div class="faq-answer"><p>Yıllık bakım sözleşmesi ile indirimli fiyat, öncelikli servis ve uzatılmış garanti avantajı elde edersiniz.</p></div>
             </div>
         </div>
     </section>
@@ -1522,42 +708,62 @@
             {
                 "@type": "Question",
                 "name": "Kombi ne zaman bakıma alınmalı?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kombiler yılda en az bir kez, tercihen ısınma sezonundan önce (Eylül-Ekim aylarında) periyodik bakıma alınmalıdır. Düzenli bakım, cihazın verimli çalışmasını sağlar ve arıza riskini minimuma indirir."
-                }
+                "acceptedAnswer": {"@type": "Answer","text": "Kombiler yılda en az bir kez, tercihen ısınma sezonundan önce (Eylül-Ekim aylarında) periyodik bakıma alınmalıdır. Düzenli bakım, cihazın verimli çalışmasını sağlar ve arıza riskini minimuma indirir."}
             },
             {
                 "@type": "Question",
                 "name": "Klima bakımı ne kadar sürer?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Standart bir split klima bakımı ortalama 45-60 dakika sürmektedir. Bu süre içerisinde iç ünite, dış ünite temizliği, filtre yıkama, gaz kontrolü ve genel performans testi yapılır."
-                }
+                "acceptedAnswer": {"@type": "Answer","text": "Standart bir split klima bakımı ortalama 45-60 dakika sürmektedir. Bu süre içerisinde iç ünite, dış ünite temizliği, filtre yıkama, gaz kontrolü ve genel performans testi yapılır."}
             },
             {
                 "@type": "Question",
                 "name": "Kombi bakımı fiyatları ne kadar?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Kombi bakım fiyatları marka, model ve cihazın durumuna göre değişiklik gösterir. Net fiyat teklifi için bizi arayabilirsiniz. Tüm fiyatlarımız piyasa ortalamasının altındadır."
-                }
+                "acceptedAnswer": {"@type": "Answer","text": "Kombi bakım fiyatları marka, model ve cihazın durumuna göre değişiklik gösterir. Net fiyat teklifi için bizi arayabilirsiniz. Tüm fiyatlarımız piyasa ortalamasının altındadır."}
             },
             {
                 "@type": "Question",
                 "name": "Klima gaz dolumu ne zaman yapılır?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Klima yeterince soğutmuyorsa, dış ünite buzlanıyorsa veya anormal sesler çıkarıyorsa gaz eksikliği olabilir. Profesyonel kontrol sonrası gerekirse gaz dolumu yapılır. Normal şartlarda yıllarca gaz kaybı olmaz."
-                }
+                "acceptedAnswer": {"@type": "Answer","text": "Klima yeterince soğutmuyorsa, dış ünite buzlanıyorsa veya anormal sesler çıkarıyorsa gaz eksikliği olabilir. Profesyonel kontrol sonrası gerekirse gaz dolumu yapılır. Normal şartlarda yıllarca gaz kaybı olmaz."}
             },
             {
                 "@type": "Question",
                 "name": "Hangi markalarda servis veriyorsunuz?",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Vaillant, Baymak, Ferroli, Ariston, Bosch, Daikin, Mitsubishi, LG, Samsung başta olmak üzere tüm kombi ve klima markalarında profesyonel bakım ve onarım hizmeti vermekteyiz."
-                }
+                "acceptedAnswer": {"@type": "Answer","text": "Vaillant, Baymak, Ferroli, Ariston, Bosch, Daikin, Mitsubishi, LG, Samsung başta olmak üzere tüm kombi ve klima markalarında profesyonel bakım ve onarım hizmeti vermekteyiz."}
+            },
+            {
+                "@type": "Question",
+                "name": "Kombi bakımı neden önemlidir?",
+                "acceptedAnswer": {"@type": "Answer","text": "Kombi bakımı enerji tasarrufu sağlar, arıza riskini azaltır ve cihaz ömrünü uzatır. Antalya kombi bakımı ile güvenli ve verimli kullanım elde edersiniz."}
+            },
+            {
+                "@type": "Question",
+                "name": "Klima bakımı hangi aralıklarla yapılmalı?",
+                "acceptedAnswer": {"@type": "Answer","text": "Klima bakımı yaz öncesi ve sonrası olmak üzere yılda iki kez yapılmalıdır. Antalya klima bakımı ile cihazınızın performansı artar."}
+            },
+            {
+                "@type": "Question",
+                "name": "Kombi ve klima bakımı için hangi servisi seçmeliyim?",
+                "acceptedAnswer": {"@type": "Answer","text": "Sertifikalı, referanslı ve müşteri memnuniyeti yüksek Antalya kombi ve klima bakımı servislerini tercih edin."}
+            },
+            {
+                "@type": "Question",
+                "name": "Bakımda hangi işlemler yapılır?",
+                "acceptedAnswer": {"@type": "Answer","text": "Filtre temizliği, gaz kontrolü, elektriksel kontroller, performans testi ve orijinal yedek parça kullanımı yapılır."}
+            },
+            {
+                "@type": "Question",
+                "name": "Bakım sonrası garanti veriliyor mu?",
+                "acceptedAnswer": {"@type": "Answer","text": "Antalya kombi ve klima bakımı sonrası işçilik ve parça garantisi sunulmaktadır."}
+            },
+            {
+                "@type": "Question",
+                "name": "Antalya'da 7/24 acil servis var mı?",
+                "acceptedAnswer": {"@type": "Answer","text": "Evet, Antalya kombi ve klima bakımı için 7/24 acil servis desteği sunuyoruz."}
+            },
+            {
+                "@type": "Question",
+                "name": "Yıllık bakım sözleşmesi avantajları nelerdir?",
+                "acceptedAnswer": {"@type": "Answer","text": "Yıllık bakım sözleşmesi ile indirimli fiyat, öncelikli servis ve uzatılmış garanti avantajı elde edersiniz."}
             }
         ]
     }
