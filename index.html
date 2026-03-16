@@ -27,6 +27,8 @@
     
    
 </head>
+    <!-- FontAwesome for WhatsApp Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 <body>
     <!-- Header -->
     <header class="header" id="header">
@@ -495,6 +497,58 @@
             <p>&copy; 2024 Antalya Mekanik - Kombi Bakımı & Klima Bakımı. Tüm hakları saklıdır. | <a href="#" style="color: var(--secondary);">Gizlilik Politikası</a> | <a href="#" style="color: var(--secondary);">Kullanım Koşulları</a></p>
         </div>
     </footer>
+    <!-- WhatsApp Sabit Mesaj Butonu (Modern) -->
+    <a href="https://wa.me/905317947326?text=Merhaba%20antalyamekanik.com.tr%20adresinden%20size%20ula%C5%9F%C4%B1yorum.%20Bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank" aria-label="WhatsApp ile iletişim">
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+    <style>
+        .whatsapp-float {
+            position: fixed;
+            right: 24px;
+            bottom: 24px;
+            z-index: 9999;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37,211,102,0.18);
+            cursor: pointer;
+            font-size: 2.2rem;
+            transition: box-shadow 0.3s, transform 0.3s;
+            animation: whatsapp-bounce 1.8s infinite;
+        }
+        .whatsapp-float:hover {
+            box-shadow: 0 8px 32px rgba(37,211,102,0.28);
+            transform: scale(1.08);
+        }
+        .whatsapp-icon {
+            font-size: 2.2rem;
+            color: #fff;
+        }
+        @keyframes whatsapp-bounce {
+            0%, 100% { transform: translateY(0); }
+            20% { transform: translateY(-8px); }
+            40% { transform: translateY(0); }
+            60% { transform: translateY(-4px); }
+            80% { transform: translateY(0); }
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float {
+                right: 10px;
+                bottom: 10px;
+                width: 44px;
+                height: 44px;
+                font-size: 1.5rem;
+            }
+            .whatsapp-icon {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
 
     <script>
         // Mobile Menu Toggle
